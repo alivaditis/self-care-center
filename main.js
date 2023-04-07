@@ -15,7 +15,8 @@ receiveMessageButton.addEventListener('click', showMessage)
 heart.addEventListener('click', favorite)
 messageBox.addEventListener('click', favorite)
 viewButton.addEventListener('click', toggleView)
-favView.addEventListener('click', deleteMessage)
+affirmationList.addEventListener('dblclick', deleteMessage)
+mantraList.addEventListener('dblclick', deleteMessage)
 
 function showMessage() {
     currentMessage = ''
@@ -43,12 +44,12 @@ function displayFavs() {
     for (var i = 0; i < savedMessages.length; i++)
         if (savedMessages[i].type === 'affirmation') {
             affirmationList.innerHTML += 
-                `<p>
+                `<p id = '${savedMessages[i].id}'>
                     ${savedMessages[i].message}
                 </p>`}
         else {
             mantraList.innerHTML +=
-                `<p>
+                `<p id = '${savedMessages[i].id}'>
                     ${savedMessages[i].message}
                 </p>`
         }
@@ -63,7 +64,7 @@ function createMessageObject() {
     if(affirmation.checked) {
             messageObject.message = affirmations[getRandomIndex(affirmations)]
             messageObject.type = 'affirmation'
-        } else {
+        } else if (mantra.checked) {
             messageObject.message = mantras[getRandomIndex(mantras)]
             messageObject.type = 'mantra'
         }
@@ -71,18 +72,24 @@ function createMessageObject() {
 }
 
 function deleteMessage(event) {
-    console.log('yipee')
     for (var i = 0; i < savedMessages.length; i++) {
-      if (event.target.pareNode.id == savedMessages[i].id) {
-         savedCovers.splice(i,1);
-      } 
+      if (event.target.id == savedMessages[i].id) {
+         savedMessages.splice(i,1);
+      }
     } 
-    displayFavs();
+    console.log(savedMessages)
+    displayFavs()
   }
 
 function toggleView() {
     whole.classList.toggle('hidden')
     favView.classList.toggle('hidden')
+    if (whole.classList.contains('hidden')) {
+        viewButton.innerText = 'Home'
+    }
+    if (favView.classList.contains('hidden')) {
+        viewButton.innerText = 'View Favorites'
+    }
     displayFavs()
 }
 

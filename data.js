@@ -24,8 +24,9 @@ var affirmations =
 
     'I honor my body by trusting the signals that it sends me.',
 
-    'I manifest perfect health by making smart choices.'
-
+    'I manifest perfect health by making smart choices.',
+    
+    'I am free from sadness.'
 ]
 
 var mantras = 
@@ -38,9 +39,6 @@ var mantras =
 
     'Tell the truth and love everyone.',
 
-    'I am free from sadness.',
-
-    'I am enough.',
 
     'In the beginning it is you, in the middle it is you and in the end it is you.',
 
