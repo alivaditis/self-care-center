@@ -61,3 +61,5 @@ var mantras =
     'I am the sky, the rest is weather.'
 
 ]
+
+var favorites = []

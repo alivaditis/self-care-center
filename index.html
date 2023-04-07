@@ -5,33 +5,54 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body >
+    
     <h1>
       ✨ Self Care Center ✨
     </h1>
     
-    <h3>
-      Which type of message?
-    </h3>
+    <button class="view">
+      Show Favorites
+    </button>
     
-    <div class = "selection-box">
-      <div class = "radio-box">  
-        <div>
-          <input type="radio" id = "affirmation" name = "message" value = "affirmation">
-          <label for="affirmation">affirmation</label>
-        </div>
-        <div>  
-          <input type="radio" id = "mantra" name = "message" value = "mantra">
-          <label for="mantra">mantra</label>
+    <div class="whole">
+      <div class="h3grouped">
+        <h3>
+          Which type of message?
+        </h3>
+        <div class = "selection-box">
+          <div class = "radio-box">  
+            <div>
+              <input type="radio" id="affirmation" name="message" value="affirmation">
+              <label for="affirmation">affirmation</label>
+            </div>
+            <div>  
+              <input type="radio" id="mantra" name="message" value="mantra">
+              <label for="mantra">mantra</label>
+            </div>
+          </div>
+          <button type = "button" id = "receive">
+            Receive Message
+          </button> 
         </div>
       </div>
-      <button type = "button" id = "receive">
-        Receive Message
-      </button> 
+        <div class = "message-box">
+          <img id ="bell" src=./assets/meditate.svg>
+          <button class="heart"> &#10084; </button>
+        </div>
     </div>
-
-    <div class = "message-box">
-      <img id = "bell" src = ./assets/meditate.svg>
+    
+    <div class="favView hidden">
+      <h3>
+        Affirmations
+      </h3>
+      <div class="affirmations">
+      </div>
+      <h3>
+        Mantras
+      </h3>
+      <div class="mantras">
+      </div>
     </div>
 
     <script type="text/javascript" src="main.js"></script>
