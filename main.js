@@ -22,7 +22,7 @@ function showMessage() {
     currentMessage = ''
     if (affirmation.checked || mantra.checked) {
         currentMessage = createMessageObject()
-        messageBox.innerHTML = `<p>${currentMessage.message}</p><button class="heart" type="button"> &#10084; </button>`
+        messageBox.innerHTML = `<p class = 'message'>${currentMessage.message}</p><button class="heart" type="button"> &#10084; </button>`
     }
 }
 

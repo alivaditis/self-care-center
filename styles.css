@@ -88,7 +88,7 @@ button {
 
 .message {
     color: black;
-    margin-right: 14px;
+    font-size: 130%;
 }
 
 .heart {
