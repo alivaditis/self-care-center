@@ -7,35 +7,41 @@ white - #ffffff;
 black - #000000;
 */
 
-html {
-    height: 100%;
-    width: 100%;
+body {
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    background-image: linear-gradient(#134d71, #f7e4bf);
+    color: #ffffff;
+}
+
+.whole {
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1 {
     margin-top: 40px;
 }
 
-h3 {
-    margin-top: 100px;
-}
-body {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    background-image: linear-gradient(#134d71, #f7e4bf);
-    color: #ffffff;
-    display: block;
 
-}
 
 button {
     padding: 12px 32px;
     margin: 32px auto;
 }
 
+.h3grouped {
+    width: 40%;
+    height: 25%;
+}
+
 .selection-box {
-    margin: 0 auto;
-    width: 45%;
+    display: flex;
+    flex-direction: column;
     border: 4px;
     border-style: dashed;
     border-radius: 5px;
@@ -69,20 +75,24 @@ button {
 
 .message-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    margin-top: 90px;
     width: 70%;
-    height: 140px;
+    height: 30%;
     border: 4px;
     border-radius: 5px;
-    border-style: solid;
     background-color: white;
+    color: black;
 }
 
 .message {
-    color: black
+    color: black;
+    margin-right: 14px;
+}
+
+.heart {
+    color: red;
 }
 
 #bell {
@@ -91,3 +101,13 @@ button {
     margin: auto;
 }
 
+.favView {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hidden {
+    display: none;
+}
